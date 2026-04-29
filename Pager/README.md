@@ -1,16 +1,67 @@
-# React + Vite
+# Pager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple messaging web application built with React and Vite. It demonstrates core JavaScript concepts and modern frontend practices, including form handling, state management, and API integration using axios.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Send messages with a name and message field
+- Form validation (minimum/maximum length, required fields)
+- Messages are sent to a backend (e.g., Firebase) via REST API
+- Responsive and modern UI
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or above recommended)
+- npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. Clone the repository:
+	```bash
+	git clone <your-repo-url>
+	cd Pager
+	```
+2. Install dependencies:
+	```bash
+	npm install
+	```
+
+### Environment Variables
+
+Create a `.env` file in the root of the Pager project and add your Firebase (or backend) URL:
+
+```
+VITE_FIREBASE_URL=<your-firebase-or-backend-url>
+```
+
+### Running the App
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The app is deployed at:
+
+[https://js-concepts.onrender.com](https://js-concepts.onrender.com)
+
+## Folder Structure
+
+- `src/components/Form.jsx` — Message form component
+- `src/components/MessageList.jsx` — Displays messages
+- `src/App.jsx` — Main app logic
+
+## License
+
+This project is for educational purposes.
