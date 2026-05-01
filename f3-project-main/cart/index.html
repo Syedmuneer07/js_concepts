@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      // Razorpay checkout instance - will be used by script.js
+      var rzpy1;
+    </script>
+  </head>
+  <body>
+<nav>
+      <div class="brand">
+        <a href="../index.html">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="/f3-project-main/profile/index.html">Home</a>
+        <a href="../Login.html">Login</a>
+        <a href="../shop/index.html">Shop</a>
+        <a href="index.html">My Cart</a>
+      </div>
+    </nav>
+
+    <main>
+      <main-content>
+        <title>My Cart</title>
+        <div class="items" id="cart-items">
+          <!-- Cart items will be populated by JavaScript -->
+        </div>
+      </main-content>
+      <aside>
+        <section>
+          <title>Order Summary</title>
+          <table class="order-table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Qty</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="order-summary-body">
+              <!-- Order summary rows will be populated by JavaScript -->
+            </tbody>
+            <tfoot>
+              <tr class="total-row">
+                <td colspan="2">Total Amount:</td>
+                <td id="total-amount">$0</td>
+              </tr>
+            </tfoot>
+          </table>
+          <button id="checkout-btn">Proceed to Checkout</button>
+        </section>
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
